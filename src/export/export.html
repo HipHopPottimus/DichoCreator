@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dichotomous key editor</title>
+        <script src="./export.js" type="module"></script>
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+        <h1>Export</h1>
+        <button id="return-button">Return to editor</button>
+        <br>
+        <div class="seperated">
+            <label for="title">Dichotomous key title: </label><input id="title">
+            <br>
+            <label for="theme">Color theme: </label>
+            <select id="theme">
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+            </select>
+            <br>
+            <label for="name">Item name: </label><input id="name">
+            <br>
+            <button onclick="exportDichoKey()">Export</button>
+        </div>
+    </body>
+</html>
