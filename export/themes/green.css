@@ -1,0 +1,29 @@
+body{
+    background-color: rgb(190, 255, 225);
+}
+.content-wrapper{
+    background-color: rgb(99, 190, 148);
+    border: 2.5px solid black;
+}
+
+.box{
+    background-color: rgb(16, 177, 77);
+    border: 5px outset rgb(99, 190, 148);
+}
+
+button{
+    background-color: rgb(27, 145, 27);
+    color: white;
+}
+
+.button:hover{
+    background-color: rgb(7, 66, 7);
+}
+
+.clickable:hover{
+    background-color: rgb(18, 151, 69);
+}
+
+.text{
+    color: black;
+}

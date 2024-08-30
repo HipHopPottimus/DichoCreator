@@ -1,0 +1,17 @@
+{
+    "startCatagories": [0,1],
+    "tree": [
+        {
+            "prompt": "Has something",
+            "img": "",
+            "description": "An object that has something",
+            "name": "Item A"
+        },
+        {
+            "prompt": "Has something else",
+            "img": "",
+            "description": "An object that has something else",
+            "name": "Item B"
+        }
+    ]
+}
