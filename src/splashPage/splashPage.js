@@ -22,7 +22,7 @@ async function createNewFile(){
     }
     );
     await fileInterface.setNewFileHandle(fileHandle);
-    let projectTemplate = (await import("./projectTemplate.JSON",{with:{type:"json"}})).default;
+    let projectTemplate = (await import("./projectTemplate.json",{with:{type:"json"}})).default;
     await fileInterface.write(projectTemplate);
 }
 
