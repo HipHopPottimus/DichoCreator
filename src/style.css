@@ -62,15 +62,13 @@ td{
     cursor: pointer;
 }
 
-.button:hover{
-}
-
 .clickable{
     transition: all 0.5s;
     cursor: pointer;
 }
 
 .clickable:hover{
+    background-color: aliceblue;
 }
 
 .round-image{
@@ -90,4 +88,26 @@ button{
 
 .seperated{
     padding-top: 1%;
+}
+
+.help-button{
+    font-size: 12px;
+    color: blue;
+    vertical-align: super;
+    cursor: pointer;
+}
+
+.tooltip{
+    display: none;
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 10px;
+    margin-left: 1%;
+    font-size: 1.25em;
+    border-radius: 5px;
+}
+
+[data-tooltip]:hover .tooltip{
+    display: inline-block;
 }

@@ -11,6 +11,10 @@ window.addEventListener("DOMContentLoaded",async () => {
     document.getElementById("return-button").addEventListener("click",() => {
         history.back();
     });
+
+    for(let tooltipElement of document.querySelectorAll("[data-tooltip]")){
+        tooltipElement.innerHTML += `<span class="tooltip">${tooltipElement.getAttribute("data-tooltip")}</span>`;
+    }
 });
 
 globalThis.exportDichoKey = async () => {
@@ -41,4 +45,8 @@ globalThis.exportDichoKey = async () => {
     await writable.write(output);
     await writable.close();
 
+    document.getElementById("output").innerHTML = `
+        <p>Dichotomous key exported sucsesfully. View it at <a href="${URL.createObjectURL(await handle.getFile())}" target="_blank">${handle.name}</a></p>
+        <p>Warning: This link is not permanent! It will expire when you close this page. For permanent access, open the file from your device.<p>
+    `;
 }

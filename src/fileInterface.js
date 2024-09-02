@@ -25,14 +25,15 @@ export default {
                 <button id="request-permission-popup-button">Give premission</button>
                 `
                 document.body.appendChild(popup);
-                document.getElementById("request-permission-popup-button").addEventListener("click", async () => {
+                popup.show();
+                popup.querySelector("#request-permission-popup-button").addEventListener("click", async () => {
+                    console.log("click");
                     let premission = await fileHandle.requestPermission({mode: "readwrite"});
                     if(premission == "granted"){
                         popup.remove();
                         resolve();
                     }
                 });
-                popup.show();
             }));
         }
         return fileHandle;
